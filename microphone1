@@ -1,0 +1,109 @@
+v {xschem version=3.4.8RC file_version=1.2}
+G {}
+K {}
+V {}
+S {}
+E {}
+T {} -650 -150 0 0 0.4 0.4 {}
+N -210 0 -150 0 {lab=vcin}
+N -210 0 -210 80 {lab=vcin}
+N -210 140 -210 220 {lab=GND}
+N -90 0 -20 0 {lab=vn1}
+N 40 0 80 0 {lab=vn2}
+N 190 -140 220 -140 {lab=n3}
+N 190 -140 190 0 {lab=n3}
+N 190 -220 210 -220 {lab=n3}
+N 190 -220 190 -140 {lab=n3}
+N 280 -140 310 -140 {lab=vout}
+N 310 -140 310 -50 {lab=vout}
+N 270 -220 310 -220 {lab=vout}
+N 310 -220 310 -140 {lab=vout}
+N 210 150 210 200 {lab=GND}
+N 470 80 470 150 {lab=GND}
+N 470 -100 470 20 {lab=vout}
+N 310 -100 470 -100 {lab=vout}
+N 310 10 320 10 {lab=GND}
+N 320 10 320 180 {lab=GND}
+N 210 -40 210 90 {lab=vcn}
+N 210 -40 270 -40 {lab=vcn}
+N 140 -0 270 -0 {lab=n3}
+C {vsource.sym} -210 110 0 1 {name=V1 value="0 ac 1" savecurrent=false}
+C {res.sym} -120 0 1 0 {name=R1
+value=380
+footprint=1206
+device=resistor
+m=1}
+C {capa.sym} 10 0 1 0 {name=C1
+m=1
+value=4.7u
+footprint=1206
+device="ceramic capacitor"}
+C {gnd.sym} -210 220 0 0 {name=l1 lab=GND}
+C {res.sym} 110 0 1 0 {name=R2
+value=4.7k
+footprint=1206
+device=resistor
+m=1}
+C {capa.sym} 240 -220 1 0 {name=C2
+m=1
+value=27p
+footprint=1206
+device="ceramic capacitor"}
+C {res.sym} 250 -140 1 0 {name=R3
+value=300k
+footprint=1206
+device=resistor
+m=1}
+C {vcvs.sym} 310 -20 0 0 {name=E1 value=10000}
+C {vsource.sym} 210 120 0 1 {name=V2 value=1.5 savecurrent=false}
+C {gnd.sym} 210 200 0 0 {name=l2 lab=GND}
+C {capa.sym} 470 50 2 0 {name=C3
+m=1
+value=1p
+footprint=1206
+device="ceramic capacitor"}
+C {gnd.sym} 470 150 0 0 {name=l3 lab=GND}
+C {lab_wire.sym} -210 20 0 0 {name=p1 sig_type=std_logic lab=vcin}
+C {lab_wire.sym} -50 0 0 0 {name=p2 sig_type=std_logic lab=vn1}
+C {lab_wire.sym} 70 0 0 0 {name=p3 sig_type=std_logic lab=vn2}
+C {lab_wire.sym} 400 -100 0 0 {name=p4 sig_type=std_logic lab=vout}
+C {simulator_commands_shown.sym} -790 -650 0 0 {name=COMMANDS
+simulator=ngspice
+only_toplevel=false 
+value="
+
+.control
+	op
+	save all
+	set appendfile
+	trans 1n 2u
+	ac dec 100 0.1 100k
+plot v(vout)
+set units=degrees
+* Plot gain and phase
+plot db(v(vout))
+plot phase v(vout)
+
+* Measure maximum gain
+	MEAS AC max_gain MAX vdb(vout) FROM=0.1 TO=10e6
+
+* Find -3dB point (from max gain)
+	LET vm3db = max_gain - 3
+  	MEAS AC fzero WHEN vdb(vout) = vm3db RISE=1
+  	MEAS AC fpole WHEN vdb(vout) = vm3db FALL=1
+	MEAS AC fgain WHEN vdb(vout) = max_gain 
+	
+ 
+*for phase
+	LET phase_deg = cph(vout)
+	MEAS  AC phase_initial FIND phase_deg at=fzero
+	MEAS  AC phase_initial FIND phase_deg at=fpole
+	MEAS  AC phase_gain FIND phase_deg at=fgain
+	
+* Write raw file
+write microphone1.raw
+.endc
+"}
+C {lab_wire.sym} 190 -80 0 0 {name=p5 sig_type=std_logic lab=n3}
+C {gnd.sym} 320 180 0 0 {name=l4 lab=GND}
+C {lab_wire.sym} 210 40 0 0 {name=p6 sig_type=std_logic lab=vcn}
