@@ -49,7 +49,7 @@ $$
 
 ### Schematic:
 
-![Opamp Amplifier](images/opamp_amplifier.png)
+![Opamp Amplifier](https://github.com/Shubham8270/xschem-proj-1/blob/main/Schematic%20and%20layout%20files/images/Picture4.png?raw=true)
 
 ---
 
@@ -69,7 +69,7 @@ $$
 
 ### Schematic:
 
-![High Pass Filter](images/high_pass_filter.png)
+![High Pass Filter](https://github.com/Shubham8270/xschem-proj-1/blob/main/Schematic%20and%20layout%20files/images/Picture6.png?raw=true)
 
 ---
 
@@ -79,7 +79,7 @@ Used to isolate load and maintain signal integrity. The buffer has a unity gain 
 
 ### Schematic:
 
-![Buffer Stage](images/buffer_stage.png)
+![Buffer Stage](https://github.com/Shubham8270/xschem-proj-1/blob/main/Schematic%20and%20layout%20files/images/Picture8.png?raw=true)
 
 ---
 
@@ -93,7 +93,7 @@ Simulation done in **Ngspice** using `.ac` and `.tran` analysis to verify:
 
 ### Example Output:
 
-![Simulation Waveforms](images/simulation_waveforms.png)
+![Simulation Waveforms](https://github.com/Shubham8270/xschem-proj-1/blob/main/Simulation%20and%20testbench%20files/images2/Picture6.png?raw=true)
 
 ---
 
