@@ -28,7 +28,7 @@ $$
 
 ### Schematic:
 
-![MEMS Thevenin Model](images/mems_thevenin_model.png)
+![MEMS Thevenin Model](https://github.com/Shubham8270/xschem-proj-1/blob/main/Documentation%20and%20usage%20guide/Fig-d1-1-USBmic.png)
 
 ---
 
