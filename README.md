@@ -12,21 +12,19 @@ All circuits are created in **Xschem**, and simulations are done using **Ngspice
 
 ---
 
-## 🔧 Thevenin Equivalent Model of MEMS Microphone
+## 🎙️ Thevenin Equivalent Model Calculations
 
-### Microphone Specs:
-- Sensitivity: **-44 dBV/Pa**
-- 94 dB SPL @ 1 kHz = **1 Pa**
-- Output resistance (**Rth**) = **380 Ω**
+**SPL to Pressure Conversion:**
 
-### Calculation for Normal Voice (~60 dB SPL):
+$$
+\text{Pressure (Pa)} = 10^{\frac{60 - 94}{20}} = 19.95 \times 10^{-3} \, \text{Pa}
+$$
 
-\[
-\text{SPL to Pressure: } 10^{\frac{60 - 94}{20}} = 19.95 \times 10^{-3} \, \text{Pa}
-\]
-\[
-\text{Vout (peak)} = 2 \times 19.95 \times 10^{-3} \times 10^{\frac{-44}{20}} = \mathbf{0.178 \, mV_{pk}}
-\]
+**Output Voltage (Peak):**
+
+$$
+V_{\text{out (peak)}} = 2 \times 19.95 \times 10^{-3} \times 10^{\frac{-44}{20}} = \mathbf{0.178 \, \text{mV}_{\text{pk}}}
+$$
 
 ### Schematic:
 
@@ -42,9 +40,12 @@ Using the SparkFun breakout board design:
 - Rfb = **300kΩ**
 - Gain = **60**
 
-\[
-\text{Vout} = 60 \times 0.178 \, \text{mV} = \mathbf{10.68 \, mV_{pk}}
-\]
+**Amplified Output Voltage:**
+
+$$
+V_{\text{out}} = 60 \times 0.178 \, \text{mV} = \mathbf{10.68 \, \text{mV}_{\text{pk}}}
+$$
+
 
 ### Schematic:
 
@@ -59,9 +60,12 @@ To eliminate low-frequency noise and DC:
 - R = **5kΩ**
 - C = **4.7 µF**
 
-\[
-f_{cutoff} = \frac{1}{2\pi RC} = \frac{1}{2\pi \cdot 5k \cdot 4.7\mu} ≈ \mathbf{6.77 \, Hz}
-\]
+**High-Pass Filter Cutoff Frequency:**
+
+$$
+f_{\text{cutoff}} = \frac{1}{2\pi RC} = \frac{1}{2\pi \cdot 5k \cdot 4.7\mu} \approx \mathbf{6.77 \, \text{Hz}}
+$$
+
 
 ### Schematic:
 
