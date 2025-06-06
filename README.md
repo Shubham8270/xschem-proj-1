@@ -83,6 +83,21 @@ Used to isolate load and maintain signal integrity. The buffer has a unity gain 
 
 ---
 
+
+## 📂 Detailed Project Resources
+
+Below are direct links to all schematic diagrams, simulation testbenches, data, and output waveforms:
+
+### 🧩 Schematic and Layout Files
+- [📘 Schematic Description](https://github.com/Shubham8270/xschem-proj-1/blob/main/Schematic%20and%20layout%20files/Schemetic.md)
+
+### 🧪 Simulation and Testbench
+- [📄 Simulation Data and Calculations](https://github.com/Shubham8270/xschem-proj-1/blob/main/Simulation%20and%20testbench%20files/data.md)
+- [📊 Plots and Analysis](https://github.com/Shubham8270/xschem-proj-1/blob/main/Simulation%20and%20testbench%20files/plots.md)
+- [📈 Waveform Output](https://github.com/Shubham8270/xschem-proj-1/blob/main/Simulation%20and%20testbench%20files/wave%20output.md)
+
+---
+
 ## 📈 Simulation Results
 
 Simulation done in **Ngspice** using `.ac` and `.tran` analysis to verify:
@@ -104,21 +119,6 @@ Simulation done in **Ngspice** using `.ac` and `.tran` analysis to verify:
 - 📐 Manual Calculation – For theoretical validation
 
 ---
-
-## 📂 Detailed Project Resources
-
-Below are direct links to all schematic diagrams, simulation testbenches, data, and output waveforms:
-
-### 🧩 Schematic and Layout Files
-- [📘 Schematic Description](https://github.com/Shubham8270/xschem-proj-1/blob/main/Schematic%20and%20layout%20files/Schemetic.md)
-
-### 🧪 Simulation and Testbench
-- [📄 Simulation Data and Calculations](https://github.com/Shubham8270/xschem-proj-1/blob/main/Simulation%20and%20testbench%20files/data.md)
-- [📊 Plots and Analysis](https://github.com/Shubham8270/xschem-proj-1/blob/main/Simulation%20and%20testbench%20files/plots.md)
-- [📈 Waveform Output](https://github.com/Shubham8270/xschem-proj-1/blob/main/Simulation%20and%20testbench%20files/wave%20output.md)
-
----
-
 
 ## ✅ Summary
 
