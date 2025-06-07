@@ -57,19 +57,19 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 
 ---
 
-##This is the schematic created in xschem with the required components.
+## This is the schematic created in xschem with the required components.
 
 ![Schematic](<./imagesas1/Picture5.png>)
 
 ---
 
-##The AC simulation output voltage magnitude (Vdb_out) vs frequency plot is shown below.
+## The AC simulation output voltage magnitude (Vdb_out) vs frequency plot is shown below.
 
 ![AC Output Voltage (dB)](<ADD_YOUR_AC_PLOT_IMAGE_HERE>)
 
 ---
 
-##The corner frequency (-3 dB frequency) determined from the plot is:
+## The corner frequency (-3 dB frequency) determined from the plot is:
 
 $$
 f_c = <ADD_CORNER_FREQUENCY_VALUE> \, \text{Hz}
