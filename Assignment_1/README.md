@@ -57,19 +57,27 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 
 ---
 
-## Question 4: Create the schematic for the above circuit in Xschem, simulate and plot and calculate
+##This is the schematic created in xschem with the required components.
 
-**Answer:**  
-Schematic File: `./images/[your_schematic_filename].png`  
-Simulation Plot: `./images/[your_simulation_plot_filename].png`  
-Calculation Sheet: `./docs/[your_calculation_file].pdf`
+![Schematic](<./imagesas1/Picture5.png>)
 
 ---
 
-## Question 5: Create a schematic and symbol for the opamp model with just a VCVS with a gain of 1000
+##The AC simulation output voltage magnitude (Vdb_out) vs frequency plot is shown below.
 
-**Answer:**  
-VCVS Schematic: `./images/[your_vcvs_schematic_filename].png`  
-VCVS Symbol: `./symbols/[your_vcvs_symbol_filename].sym`
+![AC Output Voltage (dB)](<ADD_YOUR_AC_PLOT_IMAGE_HERE>)
+
+---
+
+##The corner frequency (-3 dB frequency) determined from the plot is:
+
+$$
+f_c = <ADD_CORNER_FREQUENCY_VALUE> \, \text{Hz}
+$$
+
+![Corner Frequency Annotation](<ADD_YOUR_CORNER_FREQUENCY_IMAGE_HERE>)
+
+---
+
 
 
