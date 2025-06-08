@@ -123,8 +123,8 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 
 | Frequency      | Output Vpp | Gain     |
 |----------------|------------|----------|
-| 1.59 kHz       | 70.7 mV    | 0.707    |
-| 15.9 kHz       | 9.8 mV     | 0.098    |
+| 6.788495 Hz    | 11.9 mV    | 0.1198   |
+| 67.788495 Hz   | 44.4 mV    | 0.4448   |
 
 ---
 
