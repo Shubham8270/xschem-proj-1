@@ -63,9 +63,16 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 
 ---
 
-## The AC simulation output voltage magnitude (Vdb_out) vs frequency plot , (V_out) vs frequency plot and phase plot is shown below.
+## ➤ Schematic of opam with vcvs source:
 
-![AC Output Voltage (dB)](<./imagesas1/simulationoutput.png>)
+> ![opamp_vcvs_schematic](images/opamp_vcvs_schematic.png)
+
+- This schematic models the opamp using a simple **Voltage-Controlled Voltage Source (VCVS)**.
+- Gain is set to **1000** using parameter `E1` in SPICE.
+
+## ➤ Symbol of opam created:
+
+> ![opamp_symbol](images/opamp_symbol.png)
 
 ---
 
