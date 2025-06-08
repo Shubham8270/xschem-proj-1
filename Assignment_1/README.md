@@ -192,7 +192,7 @@ This transfer function must be used in place of the ideal amplifier gain during 
 ## Circuit Diagram
 
 <!-- Insert image showing substituted single-pole OpAmp model in the schematic -->
-![Substituted OpAmp Schematic]()
+![Substituted OpAmp Schematic](imagesas1/sigpolmod.png)
 
 ---
 
@@ -213,65 +213,9 @@ Perform an operating point (DC bias) analysis on the substituted circuit.
 ### Back-Annotation:
 
 <!-- Insert the image of the schematic with annotated DC operating point voltages and currents -->
-![Operating Point Annotated](./path-to-your-image/annotated_op.png)
+![Operating Point Annotated](imagesas1/spopannotate.png)
 
 Verify that all transistor and component bias points are in expected regions (e.g., transistor in active region, op-amp not saturated).
-
----
-
-## AC Simulation
-
-### Objective:
-
-- Plot the output voltage magnitude in dB
-- Plot the phase in degrees
-- Identify key performance metrics
-
----
-
-### Output Voltage (Magnitude and Phase)
-
-<!-- Insert AC simulation plots here -->
-![AC Gain and Phase Plot](./path-to-your-image/ac_plot.png)
-
-- **Blue Curve**: Output magnitude in dB
-- **Red Curve**: Output phase in degrees
-
----
-
-### Measurements
-
-- **Maximum Gain (dB):**  
-  $G_{max} = \text{[Insert Measured Value]} \ \text{dB}$ 
-  **Frequency at Maximum Gain:**  
-  $f_{peak} = \text{[Insert Frequency]} \ \text{Hz}$
-
-- **-3 dB Frequency:**  
-  $f_{-3dB} = \text{[Insert Measured -3 dB Frequency]} \ \text{Hz}$
-
----
-
-### Verification with Calculation
-
-For a single-pole system:
-
-$$A(s) = \frac{A_0}{1 + \frac{s}{\omega_p}}$$
-
-where:
-
-- $A_0 = 1000$
-- $RC = \tau$ (Time constant)
-- $\omega_p = \frac{1}{RC}$
-- $\Rightarrow f_{-3dB} = \frac{1}{2\pi RC}$
-
-Compare this calculated -3 dB frequency with the simulated result:
-
-- **Calculated -3 dB Frequency:**  
-  $f_{-3dB}^{calc} = \frac{1}{2\pi RC}$
-  Substitute your values of R and C to compute.
-
-- **Simulated -3 dB Frequency:**  
-  $f_{-3dB}^{sim} = \text{[Insert from simulation]} \ \text{Hz}$
 
 ---
 
