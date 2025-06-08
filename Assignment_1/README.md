@@ -70,8 +70,8 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 ---
 
 ## ➤ Maximum Gain and Frequency at Maximum Gain  
-- **Maximum Gain**: 80 dB   
-![max_gain_plot](images/max_gain_plot.png)
+- **Maximum Gain**: -1.75445e-02  
+![max_gain_plot](imagesas1/hpmaxgain.png)
 
 ---
 
