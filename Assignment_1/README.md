@@ -77,17 +77,14 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 
 ## ➤ -3 dB Frequency from Plot  
 - **-3 dB Frequency**: 1.59 kHz  
-![3db_freq_plot](images/3db_freq_plot.png)
+![3db_freq_plot](imagesas1/-3b_freq)
 
 ---
 
 ## ➤ For Gain = 10000  
 - **Gain (dB)**: 80 dB  
-- **Frequency at Maximum Gain**: 9.9 kHz  
-![gain10000_max_plot](images/gain10000_max_plot.png)
-
 - **-3 dB Frequency**: 1.59 kHz  
-![gain10000_3db_plot](images/gain10000_3db_plot.png)
+![gain10000_3db_plot](imagesas1/10000_gain.png)
 
 
 
