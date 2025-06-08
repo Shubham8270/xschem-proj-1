@@ -65,14 +65,14 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 
 ## ➤ Schematic of opam with vcvs source:
 
-> ![opamp_vcvs_schematic](images/opamp_vcvs_schematic.png)
+> ![opamp_vcvs_schematic](imagesas1/symmaticvcvsopam.png)
 
 - This schematic models the opamp using a simple **Voltage-Controlled Voltage Source (VCVS)**.
 - Gain is set to **1000** using parameter `E1` in SPICE.
 
 ## ➤ Symbol of opam created:
 
-> ![opamp_symbol](images/opamp_symbol.png)
+> ![opamp_symbol](imagesas1/symbolvsvsopam.png)
 
 ---
 
@@ -92,6 +92,42 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 - **Gain (dB)**: -1.737024e-03 dB  
 - **-3 dB Frequency**: 6.788495 Hz  
 ![gain10000_3db_plot](imagesas1/10000_gain.png)
+
+#### ➤ Input Waveform:
+
+- Type: Sine
+- Amplitude: 100 mV peak
+- Frequencies:
+  - `f1 = 6.788495 Hz` (–3 dB point)
+  - `f2 = 67.88495Hz` (10× –3 dB point)
+
+#### ➤ Transient Simulation Plots:
+
+**At –3 dB Frequency:**
+
+> ![transient_3db](images/transient_3db.png)
+
+- **Vpp (Output)** ≈ 11.98 mV
+- **Gain** = Vout_peak / Vin_peak = 11.98 / 100 = **0.1198**
+
+**At 10× –3 dB Frequency:**
+
+> ![transient_10x_3db](images/transient_10x_3db.png)
+
+- **Vpp (Output)** ≈ 44.48534 mV
+- **Gain** = 9.8 / 100 = **0.4448534**
+
+---
+
+### ➤ Conclusion:
+
+| Frequency      | Output Vpp | Gain     |
+|----------------|------------|----------|
+| 6.788495 Hz    | 11.9 mV    | 0.1198   |
+| 67.788495 Hz   | 44.4 mV    | 0.4448   |
+
+---
+
 
 
 
