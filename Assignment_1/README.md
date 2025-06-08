@@ -77,7 +77,7 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 
 ## ➤ -3 dB Frequency from Plot  
 - **-3 dB Frequency**: 1.59 kHz  
-![3db_freq_plot](imagesas1/-3b_freq)
+![3db_freq_plot](imagesas1/3b_freq.png)
 
 ---
 
