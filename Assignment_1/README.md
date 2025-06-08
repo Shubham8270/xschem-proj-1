@@ -128,10 +128,15 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 
 ---
 
+## Circuit Diagram
+![High-Pass Filter Circuit](imagesas1/Fig-d5-2-OpampModel.png)
+
+---
+
 ### Single-Pole Model of the Op-Amp
 
 <!-- Insert image of the schematic of the Op-Amp model here -->
-![Schematic of the Op-Amp model](./path-to-your-image/schematic.png)
+![Schematic of the Op-Amp model](imagesas1/symmaticsingpol.png)
 
 The op-amp is modeled using a voltage-controlled voltage source (VCVS) with a gain of 1000 followed by an RC low-pass network that introduces a single-pole response. A second VCVS with a gain of 1 buffers the output.
 
@@ -140,7 +145,7 @@ The op-amp is modeled using a voltage-controlled voltage source (VCVS) with a ga
 ### Symbol of the Op-Amp Model
 
 <!-- Insert image of the symbol of the Op-Amp model here -->
-![Symbol of the Op-Amp model](./path-to-your-image/symbol.png)
+![Symbol of the Op-Amp model](imagesas1/opamsigpol.png)
 
 ---
 
@@ -183,6 +188,99 @@ When using this op-amp in a high-pass filter configuration (e.g., active HPF usi
 $$A(s) = \frac{1000}{1 + sRC}$$
 
 This transfer function must be used in place of the ideal amplifier gain during circuit analysis (e.g., nodal analysis or loop gain analysis) to accurately capture the frequency behavior and pole/zero positions of the actual high-pass filter.
+
+## Circuit Diagram
+
+<!-- Insert image showing substituted single-pole OpAmp model in the schematic -->
+![Substituted OpAmp Schematic]()
+
+---
+
+## Substitution of Single-Pole OpAmp Model
+
+The ideal op-amp in the circuit is replaced with the single-pole op-amp model whose transfer function is:
+
+$$A(s) = \frac{1000}{1 + sRC}$$
+
+This substitution introduces a dominant pole, making the system more realistic and frequency-dependent.
+
+---
+
+## Operating Point Analysis
+
+Perform an operating point (DC bias) analysis on the substituted circuit.
+
+### Back-Annotation:
+
+<!-- Insert the image of the schematic with annotated DC operating point voltages and currents -->
+![Operating Point Annotated](./path-to-your-image/annotated_op.png)
+
+Verify that all transistor and component bias points are in expected regions (e.g., transistor in active region, op-amp not saturated).
+
+---
+
+## AC Simulation
+
+### Objective:
+
+- Plot the output voltage magnitude in dB
+- Plot the phase in degrees
+- Identify key performance metrics
+
+---
+
+### Output Voltage (Magnitude and Phase)
+
+<!-- Insert AC simulation plots here -->
+![AC Gain and Phase Plot](./path-to-your-image/ac_plot.png)
+
+- **Blue Curve**: Output magnitude in dB
+- **Red Curve**: Output phase in degrees
+
+---
+
+### Measurements
+
+- **Maximum Gain (dB):**  
+  $G_{max} = \text{[Insert Measured Value]} \ \text{dB}$ 
+  **Frequency at Maximum Gain:**  
+  $f_{peak} = \text{[Insert Frequency]} \ \text{Hz}$
+
+- **-3 dB Frequency:**  
+  $f_{-3dB} = \text{[Insert Measured -3 dB Frequency]} \ \text{Hz}$
+
+---
+
+### Verification with Calculation
+
+For a single-pole system:
+
+$$A(s) = \frac{A_0}{1 + \frac{s}{\omega_p}}$$
+
+where:
+
+- $A_0 = 1000$
+- $RC = \tau$ (Time constant)
+- $\omega_p = \frac{1}{RC}$
+- $\Rightarrow f_{-3dB} = \frac{1}{2\pi RC}$
+
+Compare this calculated -3 dB frequency with the simulated result:
+
+- **Calculated -3 dB Frequency:**  
+  $f_{-3dB}^{calc} = \frac{1}{2\pi RC}$
+  Substitute your values of R and C to compute.
+
+- **Simulated -3 dB Frequency:**  
+  $f_{-3dB}^{sim} = \text{[Insert from simulation]} \ \text{Hz}$
+
+---
+
+## Conclusion
+
+- Single-pole model accurately captures frequency limitations of real op-amps
+- Simulation matches theoretical expectations for dominant-pole behavior
+- High-frequency gain roll-off and phase shift confirmed via AC analysis
+
 
 
 
