@@ -105,14 +105,14 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 
 **At –3 dB Frequency:**
 
-> ![transient_3db](images/transient_3db.png)
+> ![transient_3db](imagesas1/transiant3db.png)
 
 - **Vpp (Output)** ≈ 11.98 mV
 - **Gain** = Vout_peak / Vin_peak = 11.98 / 100 = **0.1198**
 
 **At 10× –3 dB Frequency:**
 
-> ![transient_10x_3db](images/transient_10x_3db.png)
+> ![transient_10x_3db](imagesas1/trasiant100_3db.png)
 
 - **Vpp (Output)** ≈ 44.48534 mV
 - **Gain** = 9.8 / 100 = **0.4448534**
@@ -128,6 +128,61 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 
 ---
 
+### Single-Pole Model of the Op-Amp
+
+<!-- Insert image of the schematic of the Op-Amp model here -->
+![Schematic of the Op-Amp model](./path-to-your-image/schematic.png)
+
+The op-amp is modeled using a voltage-controlled voltage source (VCVS) with a gain of 1000 followed by an RC low-pass network that introduces a single-pole response. A second VCVS with a gain of 1 buffers the output.
+
+---
+
+### Symbol of the Op-Amp Model
+
+<!-- Insert image of the symbol of the Op-Amp model here -->
+![Symbol of the Op-Amp model](./path-to-your-image/symbol.png)
+
+---
+
+### S-Domain Transfer Function of the Op-Amp
+
+Let the differential input voltage be:
+
+$v_d = v_{ip} - v_{im}$
+
+The first VCVS amplifies this signal with a gain of 1000:
+
+$v_1 = 1000 \cdot v_d$
+
+This output then goes through an RC low-pass filter. The transfer function of an RC low-pass filter is:
+
+$H_{RC}(s) = \frac{1}{1 + sRC}$
+
+Hence, the voltage after the RC network is:
+
+$v_2 = v_1 \cdot H_{RC}(s) = \frac{1000}{1 + sRC} \cdot v_d$
+
+A unity-gain VCVS buffers this output:
+
+$v_{op} = v_2 = \frac{1000}{1 + sRC} \cdot (v_{ip} - v_{im})$
+
+---
+
+### Transfer Function of the Op-Amp
+
+$$A(s) = \frac{v_{op}}{v_{ip} - v_{im}} = \frac{1000}{1 + sRC}$$
+
+This is the s-domain transfer function of the op-amp with a single dominant pole created by the RC network.
+
+---
+
+### Substitution into a High-Pass Filter
+
+When using this op-amp in a high-pass filter configuration (e.g., active HPF using op-amp feedback), substitute the ideal gain $A \to \infty$ with the finite frequency-dependent gain:
+
+$$A(s) = \frac{1000}{1 + sRC}$$
+
+This transfer function must be used in place of the ideal amplifier gain during circuit analysis (e.g., nodal analysis or loop gain analysis) to accurately capture the frequency behavior and pole/zero positions of the actual high-pass filter.
 
 
 
