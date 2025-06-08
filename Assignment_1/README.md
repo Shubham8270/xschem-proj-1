@@ -65,14 +65,14 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 
 ## ➤ Schematic of opam with vcvs source:
 
-> ![opamp_vcvs_schematic](images/opamp_vcvs_schematic.png)
+> ![opamp_vcvs_schematic](imagesas1/symmaticvcvsopam.png)
 
 - This schematic models the opamp using a simple **Voltage-Controlled Voltage Source (VCVS)**.
 - Gain is set to **1000** using parameter `E1` in SPICE.
 
 ## ➤ Symbol of opam created:
 
-> ![opamp_symbol](images/opamp_symbol.png)
+> ![opamp_symbol](imagesas1/symbolvsvsopam.png)
 
 ---
 
