@@ -93,6 +93,42 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 - **-3 dB Frequency**: 6.788495 Hz  
 ![gain10000_3db_plot](imagesas1/10000_gain.png)
 
+#### ➤ Input Waveform:
+
+- Type: Sine
+- Amplitude: 100 mV peak
+- Frequencies:
+  - `f1 = 6.788495 Hz` (–3 dB point)
+  - `f2 = 67.88495Hz` (10× –3 dB point)
+
+#### ➤ Transient Simulation Plots:
+
+**At –3 dB Frequency:**
+
+> ![transient_3db](images/transient_3db.png)
+
+- **Vpp (Output)** ≈ 11.98 mV
+- **Gain** = Vout_peak / Vin_peak = 11.98 / 100 = **0.1198**
+
+**At 10× –3 dB Frequency:**
+
+> ![transient_10x_3db](images/transient_10x_3db.png)
+
+- **Vpp (Output)** ≈ 44.48534 mV
+- **Gain** = 9.8 / 100 = **0.4448534**
+
+---
+
+### ➤ Conclusion:
+
+| Frequency      | Output Vpp | Gain     |
+|----------------|------------|----------|
+| 1.59 kHz       | 70.7 mV    | 0.707    |
+| 15.9 kHz       | 9.8 mV     | 0.098    |
+
+---
+
+
 
 
 
