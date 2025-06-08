@@ -63,7 +63,7 @@ So, the cutoff frequency of the filter is **approximately 6.77 Hz**.
 
 ---
 
-## The AC simulation output voltage magnitude (Vdb_out) vs frequency plot is shown below.
+## The AC simulation output voltage magnitude (Vdb_out) vs frequency plot , (V_out) vs frequency plot and phase plot is shown below.
 
 ![AC Output Voltage (dB)](<ADD_YOUR_AC_PLOT_IMAGE_HERE>)
 
